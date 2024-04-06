@@ -1,0 +1,154 @@
+{
+  "address": "0xf496aD5488546651C2e4635760446D9A28C2c505",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "msgSender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newCounterValue",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "IncrementCounter",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "timeStamp",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        }
+      ],
+      "name": "PriceUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "counter",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "increment",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "price",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_price",
+          "type": "uint256"
+        }
+      ],
+      "name": "updatePrice",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xff1a4919e59d48c6640a538bcf0d665151ec6ca998c5785ad970daad5f28d80c",
+  "receipt": {
+    "to": null,
+    "from": "0xB65540bBA534E88EB4a5062D0E6519C07063b259",
+    "contractAddress": "0xf496aD5488546651C2e4635760446D9A28C2c505",
+    "transactionIndex": 1,
+    "gasUsed": "142453",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x8b93002aa43807342f1759202662551393f8930fa93be5e0da84dbfa775f14a5",
+    "transactionHash": "0xff1a4919e59d48c6640a538bcf0d665151ec6ca998c5785ad970daad5f28d80c",
+    "logs": [],
+    "blockNumber": 8244,
+    "cumulativeGasUsed": "142453",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "da20ed543497e3f1b691af8ed490b211",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"msgSender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"newCounterValue\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"name\":\"IncrementCounter\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"timeStamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"name\":\"PriceUpdated\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"counter\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"increment\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"price\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_price\",\"type\":\"uint256\"}],\"name\":\"updatePrice\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/SimpleCounter.sol\":\"SimpleCounter\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/SimpleCounter.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.23;\\n\\ncontract SimpleCounter {\\n    uint256 public counter;\\n    uint256 public price;\\n\\n    event IncrementCounter(\\n        address msgSender,\\n        uint256 newCounterValue,\\n        uint256 timestamp\\n    );\\n\\n    function increment() external {\\n        counter++;\\n        emit IncrementCounter(msg.sender, counter, block.timestamp);\\n    }\\n\\n    event PriceUpdated(uint256 indexed timeStamp, uint256 price);\\n\\n    function updatePrice(uint256 _price) external {\\n        price = _price;\\n\\n        emit PriceUpdated(block.timestamp, _price);\\n    }\\n}\\n\",\"keccak256\":\"0xe97aa424c77bfcb8e11667f2bb4c321172b10e888e749cd7ace6edb2affdc211\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061019d806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806361bc221a146100515780638d6cc56d1461006c578063a035b1fe14610081578063d09de08a1461008a575b600080fd5b61005a60005481565b60405190815260200160405180910390f35b61007f61007a366004610127565b610092565b005b61005a60015481565b61007f6100cf565b600181905560405181815242907f945c1c4e99aa89f648fbfe3df471b916f719e16d960fcec0737d4d56bd6968389060200160405180910390a250565b6000805490806100de83610140565b90915550506000546040805133815260208101929092524282820152517f04125654de600237c57852895f8a3e030f839e01c2db98f430af4a7ccc37f9b89181900360600190a1565b60006020828403121561013957600080fd5b5035919050565b60006001820161016057634e487b7160e01b600052601160045260246000fd5b506001019056fea2646970667358221220241912d7e728237078c767652c7a1bd6039c4e8988f534214ed72f9c6089ed6664736f6c63430008170033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806361bc221a146100515780638d6cc56d1461006c578063a035b1fe14610081578063d09de08a1461008a575b600080fd5b61005a60005481565b60405190815260200160405180910390f35b61007f61007a366004610127565b610092565b005b61005a60015481565b61007f6100cf565b600181905560405181815242907f945c1c4e99aa89f648fbfe3df471b916f719e16d960fcec0737d4d56bd6968389060200160405180910390a250565b6000805490806100de83610140565b90915550506000546040805133815260208101929092524282820152517f04125654de600237c57852895f8a3e030f839e01c2db98f430af4a7ccc37f9b89181900360600190a1565b60006020828403121561013957600080fd5b5035919050565b60006001820161016057634e487b7160e01b600052601160045260246000fd5b506001019056fea2646970667358221220241912d7e728237078c767652c7a1bd6039c4e8988f534214ed72f9c6089ed6664736f6c63430008170033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 3,
+        "contract": "contracts/SimpleCounter.sol:SimpleCounter",
+        "label": "counter",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 5,
+        "contract": "contracts/SimpleCounter.sol:SimpleCounter",
+        "label": "price",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
