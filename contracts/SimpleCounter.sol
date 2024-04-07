@@ -11,12 +11,12 @@ contract SimpleCounter {
         uint256 timestamp
     );
 
+    event PriceUpdated(uint256 indexed timeStamp, uint256 price);
+
     function increment() external {
         counter++;
         emit IncrementCounter(msg.sender, counter, block.timestamp);
     }
-
-    event PriceUpdated(uint256 indexed timeStamp, uint256 price);
 
     function updatePrice(uint256 _price) external {
         price = _price;

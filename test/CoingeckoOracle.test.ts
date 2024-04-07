@@ -35,7 +35,7 @@ describe("SimpleCounter Tests", function () {
   });
 
   it("canExec: true - First execution", async () => {
-    let { result } = await simpleW3f.run({ userArgs });
+    let { result } = await simpleW3f.run("onRun",{ userArgs });
     result = result as Web3FunctionResultV2;
 
     expect(result.canExec).to.equal(true);

@@ -58,9 +58,8 @@
     "*.*{ts,js}": "eslint -c .eslintrc.json"
   },
   "dependencies": {
-    "@gelatonetwork/automate-sdk": "^2.7.0-beta",
-    "@gelatonetwork/web3-functions-sdk": "^2.0.3",
-    "@simple-finance/evm-connector": "^0.0.22",
+     "@gelatonetwork/automate-sdk": "^3.0.2",
+    "@gelatonetwork/web3-functions-sdk": "2.3.0",
     "ky": "^0.33.2"
   }
 }
