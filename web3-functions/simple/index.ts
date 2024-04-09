@@ -18,11 +18,11 @@ Web3Function.onRun(async (context: Web3FunctionContext) => {
   const oracleAddress =
     (userArgs.oracle as string) ?? "0x71B9B0F6C999CBbB0FeF9c92B80D54e4973214da";
   let  oracle = new Contract(oracleAddress, SIMPLE_COUNTER_ABI, provider);
-
+  const currency = (userArgs.currency as string) ?? "ethereum";
 
 
   // Get current price on coingecko
-  const currency = (userArgs.currency as string) ?? "ethereum";
+
   let price = 0;
   try {
     const coingeckoApi = `https://api.coingecko.com/api/v3/simple/price?ids=${currency}&vs_currencies=usd`;
