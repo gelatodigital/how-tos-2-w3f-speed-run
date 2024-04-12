@@ -2,6 +2,9 @@
 
 In this `How To` we will speed run to create our first Web3 function on [blueberry](https://raas.gelato.network/rollups/details/public/arb-blueberry), one of our [Public Rollup Testnets](https://raas.gelato.network/public-testnets)
 
+[![Video Walkthrough](https://img.youtube.com/vi/QSPGlJ1B2hs/0.jpg)](https://youtu.be/QSPGlJ1B2hs)
+
+
 ## What are we building?
 
 We have deployed and verified the contract [SimpleCounter](https://arb-blueberry.gelatoscout.com/address/0xf496aD5488546651C2e4635760446D9A28C2c505?tab=contract).
